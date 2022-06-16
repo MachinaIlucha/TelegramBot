@@ -175,7 +175,7 @@
 
   <build>
 
-    <finalName>GangubasBot</finalName>
+    <finalName>TGBot</finalName>
 
     <plugins>
       <plugin>
