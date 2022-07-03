@@ -1,7 +1,0 @@
-CREATE TABLE TABLE_GAMERS (
-    id BIGINT NOT NULL DEFAULT nextval('gamer_id_seq'),
-    gamer_username VARCHAR ( 50 ) UNIQUE NOT NULL,
-    gamer_isArrested BOOLEAN NOT NULL,
-    gamer_arrestedTime BIGINT,
-    gamer_lastTimeSmoked BIGINT
-);
