@@ -110,7 +110,7 @@
 
   <build>
 
-    <finalName>GangubasBot</finalName>
+    <finalName>PlayBot</finalName>
 
     <plugins>
       <plugin>
