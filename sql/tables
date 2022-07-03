@@ -1,0 +1,10 @@
+CREATE TABLE TABLE_GAMERS (
+       id BIGINT NOT NULL DEFAULT nextval('gamer_id_seq'),
+       gamer_score INT default 0,
+       gamer_username VARCHAR ( 50 ) UNIQUE NOT NULL,
+       gamer_is_arrested BOOLEAN NOT NULL,
+       gamer_arrested_time BIGINT,
+       gamer_last_time_smoked BIGINT,
+       gamer_chat_id BIGINT,
+       gamer_id BIGINT
+);
