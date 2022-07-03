@@ -44,9 +44,9 @@ public class Game {
                 gamerRepository.update(gamer);
 
                 text = "Пане " + user.firstName() + ", ти вiдкупився, можешь йти грати.\n"+
-                        "Залишок трави - " + gamer.getScore() + " грам.";;
+                        "Залишок грошей - " + gamer.getScore() + " грн.";;
             } else
-                text = "Пане " + user.firstName() + ", ти не маешь стiльки трави щоб вiдкупитись.\n";
+                text = "Пане " + user.firstName() + ", ти не маешь стiльки грошей щоб вiдкупитись.\n";
         }else {
             if (gamer.getScore() >= 5) {
                 gamer.setScore(gamer.getScore() - 5);
@@ -55,9 +55,9 @@ public class Game {
                 gamerRepository.update(gamer);
 
                 text = "Пане " + user.firstName() + ", ти можешь йти грати.\n" +
-                        "Залишок грошей - " + gamer.getScore() + " грам.";
+                        "Залишок грошей - " + gamer.getScore() + " грн.";
             } else
-                text = "Пане " + user.firstName() + ", ти не маешь стiльки трави щоб покурити ще раз.\n";
+                text = "Пане " + user.firstName() + ", ти не маешь стiльки грошей щоб грати ще раз.\n";
         }
 
         return new SendMessage(chatID, text);
@@ -124,11 +124,11 @@ public class Game {
 
         String text;
         if (randomWeight > 0)
-            text = "Пане " + user.firstName() + "\nти знайшов: " + randomWeight + " грам за сьогоднi.\n"
-                    + "Всього ти знайшов: " + newWeight + " грам.\n";
-        else text = "Пане " + user.firstName() + "\nты знайшов: " + randomWeight * -1 + " грам сьогоднi, коли йшов на роботу.\n"
+            text = "Пане " + user.firstName() + "\nти знайшов: " + randomWeight + " грн за сьогоднi.\n"
+                    + "Всього ти знайшов: " + newWeight + " грн.\n";
+        else text = "Пане " + user.firstName() + "\nты знайшов: " + randomWeight * -1 + " грн сьогоднi, коли йшов на роботу.\n"
                 + "Але оболонськi гопники все вiджали.\n"
-                + "Всього ти знайшов: " + newWeight + " грам.\n";
+                + "Всього ти знайшов: " + newWeight + " грн.\n";
 
         return new SendMessage(chat.id(), text);
     }
@@ -157,7 +157,7 @@ public class Game {
         gamerRepository.update(gamer);
 
         String text = "Пане " + userFirstName + ", сьогоднi тобi не подфартило, ти роздав все нажите добро,"
-                + " кожному гравцю переходить - " + weightToEveryOne + " грам.\n";
+                + " кожному гравцю переходить - " + weightToEveryOne + " грн.\n";
 
         return new SendMessage(chatID, text);
     }
